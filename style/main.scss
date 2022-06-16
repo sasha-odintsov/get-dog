@@ -1,0 +1,142 @@
+$colorForm: #e2e2e2;
+@mixin text-shadow {
+    text-shadow: 1px 1px 1px rgba(54, 54, 54, 0.8),
+    2px 2px 2px rgba(54, 54, 54, 0.7);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arimo', sans-serif;
+    font-size: 1rem;
+
+    /* wrapper */
+
+    .wrap {
+        background-image: url(../img/518733.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100vh;
+        margin: 0;
+        min-height: 600px;  
+
+        /* header */
+        
+        .header {
+            background-color: rgba(207, 207, 207, 0.3);
+
+            .header-title {
+                font-family: 'Kanit', sans-serif;
+                font-size: 1.5rem;
+                color: #c5c5c5;
+                text-align: center;
+                font-weight: normal;
+                margin: 0;
+                padding: 10px;
+                @include text-shadow;
+            }
+        }
+
+        /* image */
+
+        #img-wrap {
+            width: max-content;
+            max-width: 100%;
+            margin: 0 auto;
+            height: 440px; 
+            display: flex;
+            align-items: center;
+
+            .photo {
+                max-width: 100%;
+                min-width: 250px;
+                max-height: 420px;
+                display: block;
+                margin: 0 auto;
+                border: 2px solid $colorForm;
+                box-shadow: 2px 2px 15px rgba(158, 158, 158, 0.5), 
+                -2px -2px 15px rgba(158, 158, 158, 0.5);
+            }
+        }
+
+        /* form */
+
+        .form {
+            margin: 10px;
+            text-align: center;
+
+            #breed, #button {
+                padding: 5px;
+                margin: 5px 0;
+                text-transform: uppercase;
+                font-size: 1rem;
+                color: $colorForm;
+                @include text-shadow;
+                border: 1px solid #a1a1a1;
+            }
+            
+            #breed {
+                text-transform: capitalize;
+                background-color: rgba(66, 66, 66, 0.5);
+            }
+            
+            #button {
+                background-color: rgba(161, 161, 161, 0.7);
+                cursor: pointer;
+            }
+            
+            #button:hover {
+                background-color: #d4d4d4;   
+                color: #fff; 
+                border: 1px solid #d4d4d4;
+            }
+        }
+    }
+
+    /* footer */
+
+    .footer {
+        text-align: end;
+        font-size: 1rem;
+        margin-top: -25px;
+
+        .footer-item {
+            color: #cecece;
+            padding: 0 10px;
+            @include text-shadow;
+        }
+    
+        .footer-link {
+            color: $colorForm;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    }   
+}
+
+@media screen and (max-width: 549px) {
+    body {
+        .wrap {
+            #img-wrap {
+                max-width: 99%;
+                height: 470px; 
+        
+                .photo {
+                    max-height: 430px;
+                }
+            }
+        }
+    
+        .footer {
+            font-size: 0.9rem;
+        }
+    }
+}
