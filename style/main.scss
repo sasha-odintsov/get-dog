@@ -49,7 +49,7 @@ body {
 
         #img-wrap {
             width: max-content;
-            max-width: 100%;
+            max-width: 99%;
             margin: 0 auto;
             height: 440px; 
             display: flex;
@@ -105,10 +105,10 @@ body {
 
     .footer {
         text-align: end;
-        font-size: 1rem;
         margin-top: -25px;
-
+        
         .footer-item {
+            font-size: 1rem;
             color: #cecece;
             padding: 0 10px;
             @include text-shadow;
@@ -136,7 +136,9 @@ body {
         }
     
         .footer {
-            font-size: 0.9rem;
+            .footer-item {
+                font-size: 0.9rem;
+            }
         }
     }
 }

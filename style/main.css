@@ -47,7 +47,7 @@ body .wrap #img-wrap {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  max-width: 100%;
+  max-width: 99%;
   margin: 0 auto;
   height: 440px;
   display: -webkit-box;
@@ -102,11 +102,11 @@ body .wrap .form #button:hover {
 
 body .footer {
   text-align: end;
-  font-size: 1rem;
   margin-top: -25px;
 }
 
 body .footer .footer-item {
+  font-size: 1rem;
   color: #cecece;
   padding: 0 10px;
   text-shadow: 1px 1px 1px rgba(54, 54, 54, 0.8), 2px 2px 2px rgba(54, 54, 54, 0.7);
@@ -126,7 +126,7 @@ body .footer .footer-link {
   body .wrap #img-wrap .photo {
     max-height: 430px;
   }
-  body .footer {
+  body .footer .footer-item {
     font-size: 0.9rem;
   }
 }
